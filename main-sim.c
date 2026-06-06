@@ -1,7 +1,7 @@
 /*!
   \file main-sim.c
   \brief Hauptprogramm für die Simulations des Mikrokontrollers.
-  \author Henrik Lipskoch
+  
 
   \details Das Hauptprogramm dient der Ausführung im Simulator und nicht auf
   der Hardware. Es weicht nur wenig vom Hauptprogramm für die Hardware ab und
