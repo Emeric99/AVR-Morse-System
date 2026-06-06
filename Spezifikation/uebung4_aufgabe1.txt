@@ -1,0 +1,170 @@
+1 Dit = 1ms
+1 Dah = 3 Dits = 3ms
+Pause zwischen Elementen eines Buchstabens = 1 Dit = 1ms
+Pause zwischen Buchstaben = 3 Dits = 3ms
+Pause zwischen Wörtern = 7 Dits = 7ms
+
+Randfall 1: Leere Nachricht
+
+Eingabe: Keine Eingabe 
+Erwartetes Ergebnis: Keine Ausgabe oder Fehlermeldung
+Länge: 0 Dits, 0ms
+
+Randfall 2: Einzelnes Dit
+
+Eingabe: "E" (kürzester Buchstabe)
+Morsecode: Dit (.)
+Erwartetes Ergebnis: "E"
+Länge: 1 Dit = 1ms
+
+
+Randfall 3: Ungültiges Zeichen
+
+Eingabe: Zeichen außerhalb des Morsecode-Alphabets (z.B. "$", "@")
+Erwartetes Ergebnis: Ignorieren oder Fehlermeldung
+
+
+Randfall 4: Genau 20 Zeichen
+
+Eingabe: "Staatsangehoerigkeit" 
+Erwartetes Ergebnis: Alle 20 Zeichen werden korrekt verarbeitet
+
+
+
+c) Normale Fälle 
+Test 1: "SOS" 
+
+Morsecode: ... --- ...
+Erwartetes Ergebnis: "SOS"
+Länge:
+S: 1+1+1+1+1 = 5 Dits
+O: 3+1+3+1+3 = 11 Dits
+S: 1+1+1+1+1 = 5 Dits
+Pausen: 2x3 = 6 Dits
+Gesamt: 5+11+5+6 = 27 Dits = 27ms
+
+Test 2: "Hallo"
+
+Morsecode: ….  .- .-.. .-.. ---
+Erwatetes Ergebnis: "Hallo"
+Länge:
+
+H: 1+1+1+1+1+1+1 = 7 Dits
+A: 1+1+3 = 5 Dits
+L: 1+1+3+1+1+1+1 = 9 Dits
+L: 1+1+3+1+1+1+1 = 9 Dits
+O: 3+1+3+1+3 = 11 Dits
+Pausen: 4×3 = 12 Dits
+Gesamt: 7+5+9+9+11+12 = 53 Dits = 53ms
+
+
+Test 3: "Hello World"
+
+Morsecode:  .... . .-.. .-.. --- [7] .-- --- .-. .-.. -..
+Erwatetes Ergebnis: "Hello World"
+Länge:
+H: 1+1+1+1+1+1+1 = 7 Dits
+E: 1 Dit
+L: 1+1+3+1+1+1+1 = 9 Dits
+L: 1+1+3+1+1+1+1 = 9 Dits
+O: 3+1+3+1+3 = 11 Dits
+W: 1+1+3+1+3 = 9 Dits
+O: 3+1+3+1+3 = 11 Dits
+R: 1+1+3+1+1 = 7 Dits
+L: 1+1+3+1+1+1+1 = 9 Dits
+D: 3+1+1+1+1 = 7 Dits
+Pausen: 4x3 = 12 Dits
+Wortpausen: 7 Dits
+Gesamt: 7+1+9+9+11+9+11+7+9+7+12+7 = 111ms
+
+
+Test 4: "HI BOB"
+
+Morsecode: .... .. [7 Dits] -... --- -...
+Erwartetes Ergebnis: "HI BOB"
+Länge:
+
+HI: 7+3+3 = 13 Dits
+Wortpause: 7 Dits
+B: 3+1+1+1+1+1+1 = 9 Dits
+O: 3+1+3+1+3 = 11 Dits
+B: 3+1+1+1+1+1+1 = 9 Dits
+Pausen: 2×3 = 6 Dits
+Gesamt: 13+7+9+11+9+6 = 55 Dits = 55ms
+
+Test 5: "ICH ESSE EINE BANANE" 
+
+Morsecode: .. -.-. .... [7] . ... ... . [7] . .. -. . [7] -... .- -. .- -. .
+Länge:
+
+ICH: I(3) C(11) H(7) + 2×3 = 27 Dits
+ESSE: E(1) S(5) S(5) E(1) + 3×3 = 21 Dits
+EINE: E(1) I(3) N(5) E(1) + 3×3 = 19 Dits
+BANANE: B(9) A(5) N(5) A(5) N(5) E(1) + 5×3 = 45 Dits
+Wortpausen: 3×7 = 21 Dits
+Gesamt: 27+21+19+45+21 = 133 Dits = 133ms
+
+Test 6: "WO BIST DU" (Frage, 3 Wörter)
+
+Morsecode: .-- --- [7] -... .. ... - [7] -.. ..-
+Länge:
+
+WO: W(9) O(11) + 3 = 23 Dits
+BIST: B(9) I(3) S(5) T(3) + 3×3 = 29 Dits
+DU: D(7) U(7) + 3 = 17 Dits
+Wortpausen: 2×7 = 14 Dits
+Gesamt: 23+29+17+14 = 83 Dits = 83ms
+
+Test 7: "HILFE FEUER" 
+
+Morsecode: .... .. .-.. ..-. . [7] ..-. . ..- . .-.
+Länge:
+
+HILFE: H(7) I(3) L(9) F(9) E(1) + 4×3 = 41 Dits
+FEUER: F(9) E(1) U(7) E(1) R(7) + 4×3 = 37 Dits
+Wortpause: 7 Dits
+Gesamt: 41+37+7 = 85 Dits = 85ms
+
+Test 8: "ALLES GUT" 
+
+Morsecode: .- .-.. .-.. . ... [7] --. ..- -
+Länge:
+
+ALLES: A(5) L(9) L(9) E(1) S(5) + 4×3 = 41 Dits
+GUT: G(9) U(7) T(3) + 2×3 = 25 Dits
+Wortpause: 7 Dits
+Gesamt: 41+25+7 = 73 Dits = 73ms
+
+Test 9: "BIS MORGEN" 
+
+Morsecode: -... .. ... [7] -- --- .-. --. . -.
+Länge:
+
+BIS: B(9) I(3) S(5) + 2×3 = 23 Dits
+MORGEN: M(7) O(11) R(7) G(9) E(1) N(5) + 5×3 = 55 Dits
+Wortpause: 7 Dits
+Gesamt: 23+55+7 = 85 Dits = 85ms
+
+
+Test 10: "GUTEN TAG" 
+
+Morsecode: --. ..- - . -. [7] - .- --.
+Länge:
+
+GUTEN: G(9) U(7) T(3) E(1) N(5) + 4×3 = 37 Dits
+TAG: T(3) A(5) G(9) + 2×3 = 23 Dits
+Wortpause: 7 Dits
+Gesamt: 37+23+7 = 67 Dits = 67ms
+
+Test 11: "ICH BIN HIER" 
+
+Morsecode: .. -.-. .... [7] -... .. -. [7] .... .. . .-.
+Länge:
+
+ICH: I(3) C(11) H(7) + 2×3 = 27 Dits
+BIN: B(9) I(3) N(5) + 2×3 = 23 Dits
+HIER: H(7) I(3) E(1) R(7) + 3×3 = 27 Dits
+Wortpausen: 2×7 = 14 Dits
+Gesamt: 27+23+27+14 = 91 Dits = 91ms
+
+

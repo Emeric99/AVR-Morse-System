@@ -1,0 +1,179 @@
+%%% SDD - Organisation: Beginn
+\begin{center}
+  \makeatletter
+  \textbf{
+    \@title
+  }
+  \makeatother
+  \\[1em]
+  Informatik -- Eingebettete Systeme -- Hochschule Bremerhaven
+\end{center}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}[t]{|p{15mm}|p{30mm}|p{30mm}|p{50mm}|r|}
+    \hline
+    \textbf{Version} & \textbf{Autor*inn*en} & \textbf{geändert} & \textbf{Beschreibung} & \textbf{fertig am}\\
+    \hline
+    0.1              & A. B.            &  Abschnitte 8 bis 12  & Erstellung des Dokumentes & 01.10.2019\\
+    \hline
+  \end{tabular}
+  \caption{Versionshistorie}
+\end{table}
+
+\vspace*{4em}
+
+Relevante Standards und Normen
+\begin{itemize}
+\item IEEE 1016-2009 -- IEEE Standard for Information Technology --
+  Systems Design -- Software Design Descriptions
+
+  \cite{ieee-1016-2009-software-design-description}
+\end{itemize}
+\clearpage
+%%% SDD - Organisation: Ende
+
+\chapter{Einleitung}
+\label{sdd:einleitung}
+
+\section{Designübersicht}
+\label{sdd:designuebersicht}
+
+\begin{figure}[htp]
+  \centering
+
+  \textbf{\hinweis{Hierhin gehört die Bausteinsicht, die die einzelnen Komponenten auf
+  der höchsten Ebene zeigt.}}
+
+  \caption{Bausteinsicht}
+  \label{sdd:bausteinsicht}
+\end{figure}
+
+\section{Anforderungsverfolgungsmatrix}
+\label{sdd:anforderungsmatrix}
+
+\begin{tabular}[t]{|l||l|l|l|l|l|}
+  Anforderung & \hinweis{Baustein-1} & \hinweis{Baustein-2} & \hinweis{Baustein-3} & \hinweis{Baustein-4} & \dots\\
+  \hline
+  \hline
+  \hinweis{REQ-EXT-USER-1} &         &            &            &            & \\
+  \hinweis{REQ-EXT-USER-2} &         &            &            &            & \\
+  \hline
+  \hinweis{REQ-EXT-HW-1}   &         &            &            &            & \\
+  \hinweis{REQ-EXT-HW-2}   &         &            &            &            & \\
+  \hinweis{REQ-EXT-HW-3}   &         &            &            &            & \\
+  \hline
+  \hinweis{REQ-EXT-PROD-1} &         &            &            &            & \\
+  \dots          &         &            &            &            & \\
+  \hline
+\end{tabular}
+
+\chapter{Systemarchitektur}
+\label{sdd:systemarchitektur}
+
+\section{Gewählte Systemarchitektur}
+\label{sdd:systemarchitektur-gewaehlt}
+\hinweis{Hier steht die Architektur, die Sie ausgewählt haben, wenn es
+  andere Möglichkeiten gibt, die Sie betrachtet haben, dann stehen
+  diese im nächsten Punkt, der Diskussion alternativer Designs}
+
+\section{Diskussion alternativer Designs}
+\label{sdd:systemarchitektur-alternativen}
+\hinweis{Dieser Abschnitt enthält alles, was Sie zur Lösungsfindung
+  probiert und diskutiert haben. Insbesondere schreiben Sie hier auch
+  Experimente, deren Aufbau, Durchführung und deren Ergebnisse auf.}
+
+\subsection{Experiment-N}
+\label{sec:experimente-N}
+
+\subsubsection{Zweck}
+\label{sec:experimente-zweck-N}
+
+\subsubsection{Aufbau}
+\label{sec:experimente-aufbau-N}
+
+\subsubsection{Durchführung}
+\label{sec:experimente-durchfuehrung-N}
+
+\subsubsection{Ergebisse}
+\label{sec:experimente-ergebisse-N}
+
+
+\section{Systemschnittstellenbeschreibung}
+\label{sdd:systemschnittstellen}
+
+% Kopiere Schnittstellenbeschreibung von Beginn bis Ende für jede Schnittstelle
+% Schnittstellenbeschreibung: Beginn
+\subsection{Schnittstelle-N}
+\label{sdd:schnittstellen-N}
+\hinweis{Gliedern Sie die Schnittstellenbeschreibung passend auf.}
+
+\subsubsection{Kommunikation: Initiierung, Nachrichten und Ende}
+\label{sec:schnittstellen-initiierung-N}
+\hinweis{Hier steht, welche Komponente, die Kommunikation startet und
+  beendet und welches die Nachrichten sind, die über die Schnittstelle
+  ausgetauscht werden. Sequenzdiagramme gehören hier hin.}
+
+\subsubsection{Zeitverhalten}
+\label{sec:schnittstellen-zeitverhalten-N}
+\hinweis{Hier steht, wie sich die Beteiligten der Schnittstelle
+  zeitlich verhalten sollen. Z.B.
+  \begin{itemize}
+  \item bei sehr vielen Nachrichten (\enquote{Meldungsschauer}
+    (engl. \enquote{burst}))
+  \item Timeouts
+  \item Timing-Diagramme!
+  \end{itemize}
+}
+
+\subsubsection{Fehlerbehandlung}
+\label{sec:schnittstellen-fehlerbehandlung-N}
+
+
+% Schnittstellenbeschreibung: Ende
+
+\chapter{Benutzerschnittstellendesign}
+\label{sdd:benutzerschnittstellendesign}
+\hinweis{Benutzerschnittstellen sind durchaus auch
+  Systemschnittstellen. Sie sind besonders, da hier nicht mit
+  technischen Systemen interagiert wird, sondern mit Menschen. Man
+  könnte diesen Punkt auch Mensch/Maschine-Kommunikation bezeichnen.
+  Taster und LEDs gehören zur Benutzerschnittstelle.}
+
+\section{Beschreibung der Benutzerschnittstelle}
+\label{sdd:benutzerschnittellenbeschreibung}
+
+\subsection{Bildschirmfotos / Fotos der Benutzeroberfläche}
+\label{sdd:benutzeroberfläche}
+
+\subsection{Objekte und Aktionen}
+\label{sdd:benutzerschnittstelle-objekte-aktionen}
+
+
+\chapter{Detaillierte Beschreibung der Komponenten}
+\label{sdd:detailbeschreibung}
+
+% Kopiere Komponentenbeschreibung von Beginn bis Ende für jede Komponente
+% Komponentenbeschreibung: Beginn
+\section{Baustein/Komponente-N}
+\label{sdd:komponenten-N}
+\hinweis{
+  Hier informieren Sie über
+  \begin{itemize}
+  \item die interne Struktur des Bausteins/der Komponente, in Hardware
+    und in Software
+  \item die physikalischen und logischen Eigenschaften und deren
+    Aufteilung in Hardware und Software
+  \item interne Zustände (sofern es das gibt)
+  \item interne Abläufe (Prozesse)
+  \item Datenstrukturen
+  \item Initialisierung
+  \item \dots
+  \end{itemize}
+}
+
+% Komponentenbeschreibung: Ende
+
+\chapter{Zusatzmaterial}
+\label{sdd:zusatzmaterial}
+

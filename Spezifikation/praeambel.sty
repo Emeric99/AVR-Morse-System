@@ -1,0 +1,42 @@
+%%% Präambel der Spezifikation
+
+\addtocounter{secnumdepth}{1}
+\usepackage[ngerman,english]{babel}
+\usepackage[style=german]{csquotes}
+\usepackage{times}
+\usepackage[tuenc,no-math]{fontspec}
+\setsansfont{texgyreheros}[
+  Scale=MatchLowercase,% or MatchUppercase
+  Extension=.otf,
+  UprightFont=*-regular,
+  ItalicFont=*-italic,
+  BoldFont=*-bold,
+  BoldItalicFont=*-bolditalic,
+]
+
+% Literatur mittels des Latex-Pakets Biber
+\usepackage[backend=biber,bibencoding=utf-8]{biblatex}
+\addbibresource{bibliographie.bib}
+
+% Hyperref wird mit der Option pdfencoding=auto importiert. Die Option
+% sorgt für einwandfreie Umlaute im Inhaltsverzeichnis.
+\usepackage[pdfencoding=auto,hidelinks]{hyperref}
+
+% Farben
+\usepackage[svgnames]{xcolor}
+
+% Physikalische Einheiten
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},detect-all}
+
+% Graphik
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,math}
+\usetikzlibrary{shapes.geometric,positioning}
+
+% Schaltpläne nach europäischen Richtlinien
+\usepackage[european]{circuitikz}
+\tikzset{x=1mm,y=1mm}
+
+% Hinweistext, der später gelöscht werden soll
+\newcommand\hinweis[1]{{\color{DarkSeaGreen}\textit{#1}}}

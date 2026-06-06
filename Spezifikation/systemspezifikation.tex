@@ -1,0 +1,79 @@
+\documentclass[a4paper,10pt,twoside]{scrreprt}
+
+\usepackage[margin=20mm]{geometry}
+
+\usepackage{praeambel}
+
+%%% Eigene Daten: Beginn
+\title{Design einer DCF-77-Uhr}
+\newcommand\authorA{Joyce Sonkwe}
+\newcommand\matrikelnrA{41052}
+\newcommand\authorB{Emeric Tcholagheu}
+\newcommand\matrikelnrB{41212}
+\date{15.10.2025}
+%%% Eigene Daten: Ende
+
+%%% Selbst hinzugefügte Latex-Pakete: Beginn
+
+%%% Selbst hinzugefügte Latex-Pakete: Ende
+
+\begin{document}
+%%% Standardokument: Beginn
+% Anpassungen erfolgen NUR in den vier Dokumenten
+% spmp.tex
+% srs.tex
+% sdd.tex
+% std.tex
+
+\selectlanguage{ngerman}
+\input{titelseite}
+
+\tableofcontents
+
+\newpage
+
+\section*{Eidesstattliche Erklärung}
+Mit der Einreichung dieses Dokuments erklären und versichern wir, dass
+dieses Dokument selbstständig verfasst wurde und keine anderen Quellen
+oder Hilfsmittel als die genannten benutzt wurden und die Stellen des
+Dokuments, die anderen Werken dem Wortlaut oder dem Sinn nach
+entnommen wurden, in jedem Fall unter Angabe der Quelle als Entlehnung
+kenntlich gemacht worden sind.
+
+\part[System-Projektmanagementplan (SPMP)]{
+  System-Projektmanagementplan\\[\bigskipamount]
+  (SPMP)\\[\bigskipamount]
+  \begin{otherlanguage}{english}System Project-Management Plan\end{otherlanguage}
+}
+\input{spmp}
+
+\cleardoublepage
+\part[System-Anforderungsspezifikation (SRS)]{
+  System-Anforderungsspezifikation\\[\bigskipamount]
+  (SRS)\\[\bigskipamount]
+  \begin{otherlanguage}{english}System Requirements-Description\end{otherlanguage}
+}
+\input{srs}
+
+\cleardoublepage
+\part[System-Entwicklungsbeschreibung (SDD)]{
+  System-Entwicklungsbeschreibung\\[\bigskipamount]
+  (SDD)\\[\bigskipamount]
+  System Design-Description
+}
+\input{sdd}
+
+\cleardoublepage
+\part[System-Testdefinition (STD)]{
+  System-Testdefinition\\[\bigskipamount]
+  (STD)\\[\bigskipamount]
+  System Test-Definition
+}
+\input{std}
+
+\cleardoublepage
+\part{Literatur}
+\printbibliography
+
+%%% Standardokument: Ende
+\end{document}
