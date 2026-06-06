@@ -17,16 +17,16 @@ uint8_t ringbuffer_write(morse_ringbuffer* buf, char character)
   {
     return 1; // Fehler: Buffer voll
   }
-
+  
   // Schreibe Zeichen
   buf->data[buf->write_pos] = character;
-
+  
   // Update write_pos (mit Wrap-around)
   buf->write_pos = (buf->write_pos + 1) % RINGBUFFER_CAPACITY;
-
+  
   // Erhöhe count
   buf->count++;
-
+  
   return 0; // Erfolg
 }
 
@@ -37,16 +37,16 @@ uint8_t ringbuffer_read(morse_ringbuffer* buf, char* character)
   {
     return 1; // Fehler: Buffer leer
   }
-
+  
   // Lese Zeichen
   *character = buf->data[buf->read_pos];
-
+  
   // Update read_pos (mit Wrap-around)
   buf->read_pos = (buf->read_pos + 1) % RINGBUFFER_CAPACITY;
-
+  
   // Verringere count
   buf->count--;
-
+  
   return 0; // Erfolg
 }
 
